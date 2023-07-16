@@ -17,7 +17,7 @@ This endpoint is used to submit a request. It accepts a POST request with the fo
 
 - **number (string/float)**: the cadastral number associated with the request;
 - **latitude (strict float)**: the latitude value for the request;
-- **longitude (string float)**: the longitude value for the request.
+- **longitude (strict float)**: the longitude value for the request.
 
 ```
 POST /query/
@@ -32,7 +32,7 @@ Content-Type: application/json
 
 #### /result/
 This endpoint is used to send the previously processed and validated request data to the emulated server. It accepts a POST request and returns the result of the request as a JSON object. The result can be either **true** or **false**.
-At this moment this endpoint is being used within the service, after the conversion of the *query* data into the dictionary.
+At this moment this endpoint is being used within the service, after the conversion of the *query* data into the dictionary. In case of separate usage the data will not be validated.
 
 
 #### /ping/
